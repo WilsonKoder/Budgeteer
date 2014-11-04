@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Budget Left: "
+        android:id="@+id/textViewBudgetLeft"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Make Purchase"
+        android:id="@+id/buttonMakePurchase"
+        android:layout_below="@+id/textViewBudgetLeft"
+        android:layout_toRightOf="@+id/textViewBudgetLeft" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextPurchaseAmount"
+        android:layout_alignTop="@+id/buttonMakePurchase"
+        android:layout_alignEnd="@+id/textViewBudgetLeft"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/buttonMakePurchase"
+        android:hint="Purchase Amount (to the nearest dollar)"
+        android:numeric="integer" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextTotalBudget"
+        android:layout_below="@+id/editTextPurchaseAmount"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/textViewBudgetLeft"
+        android:layout_alignBottom="@+id/buttonSetTotalBudget"
+        android:hint="Total Budget (to the nearest dollar)"
+        android:numeric="integer" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Total Budget"
+        android:id="@+id/buttonSetTotalBudget"
+        android:layout_below="@+id/buttonMakePurchase"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/editTextPurchaseAmount" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="This app was made by Wilson Koder"
+        android:id="@+id/textViewName"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
